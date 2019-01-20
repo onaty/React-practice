@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Ninjas from './ninjas';
 
 
 class App extends Component {
