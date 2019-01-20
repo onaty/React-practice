@@ -25,8 +25,17 @@
                 this.setState({name:'ewweew',age})
                 console.log(e.target,this.state)
             }
-            handleover(e){
+
+            handlechange=(e)=>{
+               
+                this.setState({name:e.target.value})
+            }
+             handleover(e){
                 console.log(e)
+            }
+            handlesubmit=(e)=>{
+               e.preventDefault()
+               console.log('form submited '+ this.state.name)
             }
             handleoncopy(e){
                 console.log("please be original")
@@ -42,6 +51,15 @@
                      <button onClick={this.handleclick}>Click Me</button>
                      <br/>
                      <button onMouseOver={this.handleover}>Hover Me</button>
+                     <br/>
+                     <br/>
+                     <br/>
+
+                     <form onSubmit={this.handlesubmit}>
+                     <input type="text" onChange={this.handlechange} />
+
+                     <button >SUbmit Me</button>
+                     </form>
                      </div>
                 );
             }
