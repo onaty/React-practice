@@ -3,15 +3,22 @@ import React, { Component } from 'react';
 class Ninjas extends Component {
     state = {}
     render() {
-const{name,age,belt}=this.props
-        console.log(this.props)
-        return (
-            <div className="Ninjas">
-                <h1>My name is {name}</h1>
-                <h4>I am {age} yars old</h4>
-                <h5>I use a {belt} belt</h5>
+        const { ninjas } = this.props
+        var i=0;
+        const ninjaList = ninjas.map(ninja => {
+           
+            ninja.id=i++;
+            return <div key={ninja.id} className="ninjalist">
+                <p>My name is {ninja.name}</p>
+                <p>I am {ninja.age} yars old</p>
+                <p>I use a {ninja.belt} belt</p>
             </div>
-        );
+        })
+        console.log(this.props)
+        return <div className="ninja-list">
+
+            {ninjaList}
+        </div>
     }
 }
 
