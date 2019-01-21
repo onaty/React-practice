@@ -12,6 +12,8 @@ const Ninjas = ({ninjas}) => {
             <p>My name is {ninja.name}</p>
             <p>I am {ninja.age} yars old</p>
             <p>I use a {ninja.belt} belt</p>
+            <br/>
+            <hr/>
         </div>
     })
 
