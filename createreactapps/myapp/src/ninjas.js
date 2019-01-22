@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Ninjas = ({ninjas}) => {
+const Ninjas = ({ninjas,deleteninja}) => {
     var i = 0;
     // var {ninjas}=props
     console.log(ninjas)
@@ -12,6 +12,7 @@ const Ninjas = ({ninjas}) => {
             <p>My name is {ninja.name}</p>
             <p>I am {ninja.age} yars old</p>
             <p>I use a {ninja.belt} belt</p>
+            <button onClick={()=>{deleteninja(ninja.id)}}>Delete ninja</button>
             <br/>
             <hr/>
         </div>

@@ -36,15 +36,25 @@ class App extends Component {
 
   addninja = (ninjas) => {
     // console.log(ninjas )
-    ninjas.id=Math.random() *7
-    let fighters=[...this.state.ninjas,ninjas]
-    this.setState({ ninjas: fighters})
+    ninjas.id = Math.random() * 7
+    let fighters = [...this.state.ninjas, ninjas]
+    this.setState({ ninjas: fighters })
+  }
+
+  deleteninja = (id) => {
+    console.log(id)
+    let fighters = this.state.ninjas.filter(ninjas => {
+      return ninjas.id != id
+    }
+  
+    )
+    this.setState({ ninjas: fighters })
   }
   render() {
     return (
       <div className="App">
         <h1>My first react app :)</h1>
-        <Ninjas ninjas={this.state.ninjas} />
+        <Ninjas deleteninja={this.deleteninja} ninjas={this.state.ninjas} />
         <AddNinja AddNinja={this.addninja} />
       </div>
     );
