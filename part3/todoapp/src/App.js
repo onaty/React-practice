@@ -10,10 +10,21 @@ state={
 }
 
 
+deleteTodo=(id)=>{
+  console.log(id)
+
+  let todos=this.state.todos.filter(todo=>{
+    return todo.id!==id
+  })
+
+  this.setState({todos:todos})
+}
+
   render() {
     return (
-      <div className="App">
-       <Todos todos={this.Todos} />
+      <div className="todo-app container">
+        <h1 className="center blue-text">Todo's</h1>
+       <Todos deletetodo={this.deleteTodo} todos={this.state.todos} />
       </div>
     );
   }
