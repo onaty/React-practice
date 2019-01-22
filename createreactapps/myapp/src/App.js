@@ -50,6 +50,10 @@ class App extends Component {
     )
     this.setState({ ninjas: fighters })
   }
+
+  componentDidUpdate(){
+    console.log('updated')
+  }
   render() {
     return (
       <div className="App">
