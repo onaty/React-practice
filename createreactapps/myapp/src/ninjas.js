@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './ninja.css'
 const Ninjas = ({ninjas,deleteninja}) => {
     var i = 0;
     // var {ninjas}=props
