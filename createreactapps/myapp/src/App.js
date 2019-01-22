@@ -52,7 +52,7 @@ class App extends Component {
   }
 
   componentDidUpdate(){
-    console.log('updated')
+    console.log('updatedlife cycles in react')
   }
   render() {
     return (
