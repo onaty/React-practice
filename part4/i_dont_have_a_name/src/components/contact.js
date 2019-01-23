@@ -1,6 +1,10 @@
 import React from 'react';
 
-const ContactPage =()=>{
+const ContactPage =(props)=>{
+// setTimeout(() => {
+//   props.history.push('/about')
+// }, 2000);
+
 return (
     <div className="container">
         <h4 className="center">ContactPage Page</h4>
